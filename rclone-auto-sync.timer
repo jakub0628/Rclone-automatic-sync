@@ -2,8 +2,7 @@
 Description=Run rclone-auto-sync every minute
 
 [Timer]
-OnBootSec=1min
-OnUnitActiveSec=1min
+OnCalendar=*-*-* *:*:00
 
 [Install]
 WantedBy=timers.target
