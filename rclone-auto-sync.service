@@ -1,0 +1,6 @@
+[Unit]
+Description=Performs rclone bisync on the default Google Drive
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash $HOME/.local/bin/rclone-auto-sync.sh
