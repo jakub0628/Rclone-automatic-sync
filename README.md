@@ -4,7 +4,12 @@ This script used `systemd` to automate bidirectional syncing of Google Drive wit
 
 ## Usage
 
-After setting up Rclone sync according to the available documentation and aliasing the desired command, e.g. `rclone bisync -Plv $GDRIVE gdrive:` to `rclone-sync`, files needs to be placed in the following locations (Arch Linux):
+For Arch Linux:
+
+1. Install all requirements in `requirements.txt` using an appropriate package manager
+2. Set up Rclone according to the available documentation
+3. Alias the desired sync command, e.g. `rclone bisync -Plv $GDRIVE gdrive:` to `rclone-sync`
+4. `cd` into the cloned folder and run `install.sh` (may require `sudo`), which places files in the following locations (make sure `~/.local/bin/` is added to PATH):
 
 | file                       | location               | role                                       |
 | -------------------------- | ---------------------- | ------------------------------------------ |
@@ -12,4 +17,4 @@ After setting up Rclone sync according to the available documentation and aliasi
 | `rclone-auto-sync.service` | `/etc/systemd/system/` | service, which runs the script             |
 | `rclone-auto-sync.time`    | `/etc/systemd/system/` | timer, which runs the service every minute |
 
-Afterwards, the timer is activated using `systemctl enable rclone-auto-sync.timer`.
+5. Activate the timer using `systemctl enable rclone-auto-sync.timer`.

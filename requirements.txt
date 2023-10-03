@@ -1,0 +1,4 @@
+rclone
+systemd
+xprintidle
+notify-send
