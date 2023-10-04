@@ -1,5 +1,6 @@
 [Unit]
 Description=Performs rclone bisync on the default Google Drive
+ConditionPathExists=!/tmp/rclone-running-flag
 
 [Service]
 Type=simple
