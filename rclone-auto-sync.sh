@@ -7,7 +7,7 @@ connection_check() {
 }
 
 rclone_sync(){
-    rclone bisync -Plv --drive-skip-gdocs "/run/media/kuba/storage/gdrive" gdrive: | tee "$HOME/.rclone_sync.log"
+    rclone bisync -lv --drive-skip-gdocs "/run/media/kuba/storage/gdrive" gdrive: | tee "$HOME/.rclone_sync.log"
 }
 
 get_nid() {
